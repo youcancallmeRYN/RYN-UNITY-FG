@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: 4222cc47522f39545885cb14e12d06a2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3992528737509189061
+    second: Axl(Run)FIXED 1_0
+  - first:
+      213: 589107306811119457
+    second: Axl(Run)FIXED 1_1
+  - first:
+      213: 9163415446509579554
+    second: Axl(Run)FIXED 1_2
+  - first:
+      213: 4525343689982006805
+    second: Axl(Run)FIXED 1_3
+  - first:
+      213: -3448104462279688432
+    second: Axl(Run)FIXED 1_4
+  - first:
+      213: 6603670455677430395
+    second: Axl(Run)FIXED 1_5
+  - first:
+      213: -3807921681365392592
+    second: Axl(Run)FIXED 1_6
+  - first:
+      213: 2754022044774929286
+    second: Axl(Run)FIXED 1_7
+  - first:
+      213: -8645552442226392168
+    second: Axl(Run)FIXED 1_8
+  - first:
+      213: -585449548559037989
+    second: Axl(Run)FIXED 1_9
+  - first:
+      213: -7062248529019253932
+    second: Axl(Run)FIXED 1_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Axl(Run)FIXED 1_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 12
+        width: 115
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c526c2cbbf486730800000000000000
+      internalID: 3992528737509189061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Axl(Run)FIXED 1_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 11
+        width: 143
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 167501d69fdec2800800000000000000
+      internalID: 589107306811119457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Axl(Run)FIXED 1_2
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 27
+        width: 152
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22de78a7ccdfa2f70800000000000000
+      internalID: 9163415446509579554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Axl(Run)FIXED 1_3
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 16
+        width: 148
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 516dee71c104dce30800000000000000
+      internalID: 4525343689982006805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Axl(Run)FIXED 1_4
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 12
+        width: 124
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01f3169a24fd520d0800000000000000
+      internalID: -3448104462279688432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Axl(Run)FIXED 1_5
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 11
+        width: 147
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7a256caa43f4ab50800000000000000
+      internalID: 6603670455677430395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Axl(Run)FIXED 1_6
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 27
+        width: 148
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03325b1f76b872bc0800000000000000
+      internalID: -3807921681365392592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Axl(Run)FIXED 1_7
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 12
+        width: 148
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68397625570483620800000000000000
+      internalID: 2754022044774929286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Axl(Run)FIXED 1_8
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 11
+        width: 124
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 893c5122cd3d40880800000000000000
+      internalID: -8645552442226392168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Axl(Run)FIXED 1_9
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 12
+        width: 122
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd9c938ccb010e7f0800000000000000
+      internalID: -585449548559037989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Axl(Run)FIXED 1_10
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 12
+        width: 115
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45b4848516addfd90800000000000000
+      internalID: -7062248529019253932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: dc715724afbec6b49b12dd5d058ebcf0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Axl(Run)FIXED 1_0: 3992528737509189061
+      Axl(Run)FIXED 1_1: 589107306811119457
+      Axl(Run)FIXED 1_10: -7062248529019253932
+      Axl(Run)FIXED 1_2: 9163415446509579554
+      Axl(Run)FIXED 1_3: 4525343689982006805
+      Axl(Run)FIXED 1_4: -3448104462279688432
+      Axl(Run)FIXED 1_5: 6603670455677430395
+      Axl(Run)FIXED 1_6: -3807921681365392592
+      Axl(Run)FIXED 1_7: 2754022044774929286
+      Axl(Run)FIXED 1_8: -8645552442226392168
+      Axl(Run)FIXED 1_9: -585449548559037989
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
