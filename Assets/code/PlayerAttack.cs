@@ -2,11 +2,11 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
- 
+
 public class PlayerAttack : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
-    private Animator _animator;
+    [SerializeField] private Animator _animator;
     private bool isGrounded;
     private bool isAttacking;
     private Rigidbody2D rb;
@@ -14,57 +14,82 @@ public class PlayerAttack : MonoBehaviour
 
     private float timeBtwAttack;
     public float startTimeBtwAttack;
-    public Vector2 attackPos = new Vector2(0,0); //Transform
+    public Vector2 attackPos = new Vector2(0, 0); //Transform
     public float attackRange; //float
     public LayerMask whatIsPlayers;
-
     public GameObject hitBox;
+    private bool canAttack = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        _animator = GetComponent<Animator>();
+        _animator.SetBool("isAttacking", false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(timeBtwAttack <= 0)
-        {
-            //Attack cooldown
-      if(Input.GetButtonDown("AttackP1") && isGrounded)
-      {
-        Collider2D[] playersToDamage = Physics2D.OverlapCircleAll(hitBox.transform.position, attackRange , whatIsPlayers);
-        foreach (Collider2D Gameobject in playersToDamage)
-        {
-            Debug.Log("Hit!");
-        } 
         
-      }
-      timeBtwAttack = startTimeBtwAttack;
+    }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (Input.GetButton("AttackP1") && canAttack)
+        {
+            _animator.SetBool("isAttacking", true);
+            Collider2D[] playersToDamage = Physics2D.OverlapCircleAll(hitBox.transform.position, attackRange, whatIsPlayers);
+
+            foreach (Collider2D Gameobject in playersToDamage)
+            {
+                if (other.TryGetComponent(out IDamageable damageable))
+                {
+                    damageable.ApplyDamage(damage);
+                    Debug.Log("Hit!");
+                    StartCoroutine(AttackCooldown());
+                }
+            }
         }
         else
         {
-            timeBtwAttack -= Time.deltaTime;
+            _animator.SetBool("isAttacking", false);
         }
 
-       
-      if(_animator)
-      {
-        _animator.SetBool("isAttacking", isAttacking);
-      }
+
+
+        // Debug.Log(timeBtwAttack);
+
+        // if (canAttack == true) {}
+        // if (timeBtwAttack <= 0)
+        // {
+        //Attack cooldown
+        // if (Input.GetButton("AttackP1") && canAttack == true)
+        // {
+
+
+
+
+        // }
+        // timeBtwAttack = startTimeBtwAttack;
+        // }
+        // else
+        // {
+        //     timeBtwAttack -= Time.deltaTime;
+        // }
+
+
     }
 
-     
-
-    void OnTriggerStay2D(Collider2D other) 
+    private IEnumerator AttackCooldown()
     {
-        if(other.TryGetComponent(out IDamageable damageable))
-        {
-            damageable.ApplyDamage(damage);
-        }
+        Debug.Log("Cooldown Start");
+        _animator.SetBool("isAttacking", false);
+        canAttack = false;
+        yield return new WaitForSeconds(startTimeBtwAttack);
+        canAttack = true;
+        Debug.Log("Cooldown Finish");
+
     }
     void OnDrawGizmosSelected()
     {

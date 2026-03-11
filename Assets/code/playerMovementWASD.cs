@@ -10,12 +10,9 @@ public class PlayerMovementWASD : MonoBehaviour
     public float groundCheckDistance = 0.12f;
     public Vector2 groundCheckOffset = new Vector2(0f, -0.5f);
     public LayerMask groundLayer;
-
     private Rigidbody2D rb;
     private float horizInput;
     private bool isGrounded;
-
-    
 
     void Start()
     {
