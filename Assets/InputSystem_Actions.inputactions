@@ -16,7 +16,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Attack",
+                    "name": "AttackP1",
                     "type": "Button",
                     "id": "c5da11de-7ff2-4524-aec6-ad906c8250eb",
                     "expectedControlType": "",
@@ -186,6 +186,17 @@
                     "action": "Crouch",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ed0f4054-9656-49a6-9329-f5b24aa40dce",
+                    "path": "<Keyboard>/u",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "AttackP1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -203,7 +214,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Attack",
+                    "name": "AttackP2",
                     "type": "Button",
                     "id": "0577d5bb-7419-4498-8819-bbe2e67cf62a",
                     "expectedControlType": "",
@@ -232,18 +243,7 @@
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "ac92d38c-73a5-4ecd-96dc-cb23b9bc2449",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "WASD",
+                    "name": "ARROWS",
                     "id": "e40ae2c2-ba70-4bf1-b87f-9d929bfef0c1",
                     "path": "Dpad",
                     "interactions": "",
@@ -299,50 +299,6 @@
                 },
                 {
                     "name": "",
-                    "id": "c58e6ecc-b8eb-4496-842d-38c3e0e9397c",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1b5d97a2-0bb9-4dbb-b659-8556227960ee",
-                    "path": "<Touchscreen>/primaryTouch/tap",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Touch",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9ccbafde-f306-42cb-b5c4-9ddb2643992c",
-                    "path": "<Joystick>/trigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Joystick",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b83008ea-03ef-466a-a88a-75b937c14cd2",
-                    "path": "<XRController>/{PrimaryAction}",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "XR",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "87f88a3b-7f74-4793-a41e-170eff13484e",
                     "path": "<Keyboard>/leftShift",
                     "interactions": "",
@@ -393,6 +349,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a0f2554f-b69b-4f08-9b42-60536a7a277d",
+                    "path": "<Keyboard>/numpad4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "AttackP2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

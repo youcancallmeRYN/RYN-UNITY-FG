@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class PlayerAttack : MonoBehaviour
+public class PlayerAttackP2 : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
     [SerializeField] private Animator _animator;
@@ -36,7 +36,7 @@ public class PlayerAttack : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (Input.GetButton("AttackP1") && canAttack)
+        if (Input.GetButton("AttackP2") && canAttack)
         {
             _animator.SetBool("isAttacking", true);
             Collider2D[] playersToDamage = Physics2D.OverlapCircleAll(hitBox.transform.position, attackRange, whatIsPlayers);
