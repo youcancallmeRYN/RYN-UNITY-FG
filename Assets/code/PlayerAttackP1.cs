@@ -11,6 +11,7 @@ public class PlayerAttackP1 : MonoBehaviour
     private bool isAttacking;
     private Rigidbody2D rb;
     [SerializeField] float damage = 8f;
+     private float horizInput;
 
     private float timeBtwAttack;
     public float startTimeBtwAttack;
@@ -31,7 +32,11 @@ public class PlayerAttackP1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (spriteRenderer != null)
+        {
+            if (horizInput > 0.1f) hitBox.transform.localScale = new Vector3 (1,1,1);
+            else if (horizInput < -0.1f) hitBox.transform.localScale = new Vector3 (-1,1,1);
+        }
     }
 
     void OnTriggerStay2D(Collider2D other)

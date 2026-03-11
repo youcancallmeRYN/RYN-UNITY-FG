@@ -521,10 +521,10 @@ InputManager:
     m_Name: AttackP2
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 4
-    positiveButton: 4
-    altNegativeButton: 4
-    altPositiveButton: 4
+    negativeButton: 
+    positiveButton: '[4]'
+    altNegativeButton: 
+    altPositiveButton: 
     gravity: 0
     dead: 0.001
     sensitivity: 3
