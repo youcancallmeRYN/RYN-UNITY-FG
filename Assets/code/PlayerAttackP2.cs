@@ -11,14 +11,15 @@ public class PlayerAttackP2 : MonoBehaviour
     private bool isAttacking;
     private Rigidbody2D rb;
     [SerializeField] float damage = 8f;
+    private float horizInput;
 
     private float timeBtwAttack;
     public float startTimeBtwAttack;
-    public Vector2 attackPos = new Vector2(0, 0); //Transform
-    public float attackRange; //float
+    public float attackRange; 
     public LayerMask whatIsPlayers;
     public GameObject hitBox;
     private bool canAttack = true;
+    private bool facingRight = false; // Player 2 start facing left, hence false 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,8 +31,26 @@ public class PlayerAttackP2 : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {    
+        //to flip hitboxes when facing the appropriate directions
+         horizInput = Input.GetAxisRaw("Horizontal");
+            if (horizInput > 0.1f && !facingRight) 
+            {
+               Flip();
+            }
+            else if (horizInput < -0.1f && facingRight)
+            {
+                Flip();
+            }
         
+    }
+
+    void Flip()
+    {
+        Vector3 currentScale = hitBox.transform.localScale;
+        currentScale.x *= -1;
+        hitBox.transform.localScale = currentScale;
+        facingRight = !facingRight;
     }
 
     void OnTriggerStay2D(Collider2D other)

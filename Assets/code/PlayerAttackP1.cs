@@ -20,6 +20,7 @@ public class PlayerAttackP1 : MonoBehaviour
     public LayerMask whatIsPlayers;
     public GameObject hitBox;
     private bool canAttack = true;
+    private bool facingRight = true; // Player 1 start facing right, hence true
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,12 +33,24 @@ public class PlayerAttackP1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (spriteRenderer != null)
-        {
-            if (horizInput > 0.1f) hitBox.transform.localScale = new Vector3 (1,1,1);
-            else if (horizInput < -0.1f) hitBox.transform.localScale = new Vector3 (-1,1,1);
-        }
+        horizInput = Input.GetAxisRaw("Horizontal2");
+            if (horizInput > 0.1f && !facingRight) 
+            {
+               Flip();
+            }
+            else if (horizInput < -0.1f && facingRight)
+            {
+                Flip();
+            }
     }
+    void Flip()
+    {
+        Vector3 currentScale = hitBox.transform.localScale;
+        currentScale.x *= -1;
+        hitBox.transform.localScale = currentScale;
+        facingRight = !facingRight;
+    }
+
 
     void OnTriggerStay2D(Collider2D other)
     {
