@@ -30,7 +30,7 @@ public class playerMovementARROWS : MonoBehaviour
 
     void Update()
     {
-        horizInput = Input.GetAxisRaw("Horizontal");
+        horizInput = Input.GetAxisRaw("Horizontal2");
        
 
         Vector2 rayOrigin = groundCheck != null ? (Vector2)groundCheck.position : (Vector2)transform.position + groundCheckOffset;
@@ -51,7 +51,7 @@ public class playerMovementARROWS : MonoBehaviour
             _animator.SetBool("isGrounded", isGrounded);
         }
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump2") && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }

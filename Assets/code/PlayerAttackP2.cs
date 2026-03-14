@@ -15,6 +15,7 @@ public class PlayerAttackP2 : MonoBehaviour
 
     private float timeBtwAttack;
     public float startTimeBtwAttack;
+    public Vector2 attackPos = new Vector2(0, 0);
     public float attackRange; 
     public LayerMask whatIsPlayers;
     public GameObject hitBox;
@@ -33,7 +34,7 @@ public class PlayerAttackP2 : MonoBehaviour
     void Update()
     {    
         //to flip hitboxes when facing the appropriate directions
-         horizInput = Input.GetAxisRaw("Horizontal");
+         horizInput = Input.GetAxisRaw("Horizontal2");
             if (horizInput > 0.1f && !facingRight) 
             {
                Flip();
@@ -44,7 +45,6 @@ public class PlayerAttackP2 : MonoBehaviour
             }
         
     }
-
     void Flip()
     {
         Vector3 currentScale = hitBox.transform.localScale;
@@ -52,6 +52,7 @@ public class PlayerAttackP2 : MonoBehaviour
         hitBox.transform.localScale = currentScale;
         facingRight = !facingRight;
     }
+    
 
     void OnTriggerStay2D(Collider2D other)
     {

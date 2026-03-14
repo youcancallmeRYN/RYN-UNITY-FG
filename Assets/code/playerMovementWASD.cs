@@ -23,7 +23,7 @@ public class PlayerMovementWASD : MonoBehaviour
 
     void Update()
     {
-        horizInput = Input.GetAxisRaw("Horizontal2");
+        horizInput = Input.GetAxisRaw("Horizontal1");
 
         Vector2 rayOrigin = groundCheck != null ? (Vector2)groundCheck.position : (Vector2)transform.position + groundCheckOffset;
         RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, groundCheckDistance, groundLayer);
@@ -45,7 +45,7 @@ public class PlayerMovementWASD : MonoBehaviour
         }
         
 
-        if (Input.GetButtonDown("Jump2") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }

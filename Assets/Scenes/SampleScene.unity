@@ -214,7 +214,7 @@ MonoBehaviour:
   damage: 20
   startTimeBtwAttack: 1
   attackPos: {x: -10.01, y: 6.09}
-  attackRange: 1
+  attackRange: 5
   whatIsPlayers:
     serializedVersion: 2
     m_Bits: 128
@@ -1100,7 +1100,8 @@ MonoBehaviour:
   _animator: {fileID: 1413537457}
   damage: 20
   startTimeBtwAttack: 1
-  attackRange: 1
+  attackPos: {x: 0, y: 0}
+  attackRange: 5
   whatIsPlayers:
     serializedVersion: 2
     m_Bits: 256
@@ -2094,7 +2095,7 @@ GameObject:
   - component: {fileID: 1413537459}
   m_Layer: 0
   m_Name: PLAYER2
-  m_TagString: Player
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

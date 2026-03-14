@@ -5,7 +5,7 @@ using DG.Tweening;
 public class MainMenuLoader : MonoBehaviour
 {
     public static MainMenuLoader Instance;
-    private bool isPaused =false;
+    private bool isPaused = false;
 
     private void Awake()
     {
@@ -32,25 +32,6 @@ public class MainMenuLoader : MonoBehaviour
         isPaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    public void TogglePause()
-    {
-        if(isPaused)
-        ResumeGame();
-        else
-        PauseGame();
-    }
-
-    public void PauseGame()
-    {
-       Time.timeScale = 0f;
-       isPaused = true;
-    }
-    public void ResumeGame()
-    {
-        Time.timeScale = 1f;
-        isPaused = false;
-    }
-    
     public void QuitGame()
     {
         #if UNITY_EDITOR

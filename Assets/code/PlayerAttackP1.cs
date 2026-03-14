@@ -11,12 +11,12 @@ public class PlayerAttackP1 : MonoBehaviour
     private bool isAttacking;
     private Rigidbody2D rb;
     [SerializeField] float damage = 8f;
-     private float horizInput;
+    private float horizInput;
 
     private float timeBtwAttack;
     public float startTimeBtwAttack;
-    public Vector2 attackPos = new Vector2(0, 0); //Transform
-    public float attackRange; //float
+    public Vector2 attackPos = new Vector2(0, 0); 
+    public float attackRange; 
     public LayerMask whatIsPlayers;
     public GameObject hitBox;
     private bool canAttack = true;
@@ -33,7 +33,8 @@ public class PlayerAttackP1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizInput = Input.GetAxisRaw("Horizontal2");
+        //to flip hitboxes when facing the appropriate directions
+        horizInput = Input.GetAxisRaw("Horizontal1");
             if (horizInput > 0.1f && !facingRight) 
             {
                Flip();
