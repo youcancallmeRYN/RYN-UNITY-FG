@@ -43,6 +43,15 @@ public class PlayerAttackP1 : MonoBehaviour
             {
                 Flip();
             }
+
+        if (Input.GetButton("AttackP1") && canAttack)
+        {
+            _animator.SetBool("isAttacking", true);
+        }
+        else
+        {
+            _animator.SetBool("isAttacking", false);
+        }
     }
     void Flip()
     {
@@ -57,7 +66,6 @@ public class PlayerAttackP1 : MonoBehaviour
     {
         if (Input.GetButton("AttackP1") && canAttack)
         {
-            _animator.SetBool("isAttacking", true);
             Collider2D[] playersToDamage = Physics2D.OverlapCircleAll(hitBox.transform.position, attackRange, whatIsPlayers);
 
             foreach (Collider2D Gameobject in playersToDamage)
@@ -70,34 +78,6 @@ public class PlayerAttackP1 : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            _animator.SetBool("isAttacking", false);
-        }
-
-
-
-        // Debug.Log(timeBtwAttack);
-
-        // if (canAttack == true) {}
-        // if (timeBtwAttack <= 0)
-        // {
-        //Attack cooldown
-        // if (Input.GetButton("AttackP1") && canAttack == true)
-        // {
-
-
-
-
-        // }
-        // timeBtwAttack = startTimeBtwAttack;
-        // }
-        // else
-        // {
-        //     timeBtwAttack -= Time.deltaTime;
-        // }
-
-
     }
 
     private IEnumerator AttackCooldown()
