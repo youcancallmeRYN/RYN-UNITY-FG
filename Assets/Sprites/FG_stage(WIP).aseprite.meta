@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 904b91819ca151e488f6770badd36fb6
+guid: cac24487319a08844937a8673b942d89
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,19 +123,19 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Frame_0
+  - name: FG_stage(WIP)
     originalName: 
-    pivot: {x: 0.49269938, y: 0.59343314}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
       x: 4
-      y: 2
-      width: 121
-      height: 104
-    spriteID: ef6b7fa8695c3af409807d2543a8bed9
+      y: 4
+      width: 1700
+      height: 700
+    spriteID: 33c0e74a271e9e342b62b74cc3c9ab60
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,119 +144,29 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: Frame_1
-    originalName: 
-    pivot: {x: 0.49999988, y: 0.650819}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 133
-      y: 116
-      width: 119
-      height: 82
-    spriteID: 72980ca5bb9600c4eb55526cc47bb254
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 133, y: 116}
-  - name: Frame_2
-    originalName: 
-    pivot: {x: 0.4855185, y: 0.63835895}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 208
-      width: 122
-      height: 83
-    spriteID: 6aa45f6d504b4904391aadc67184c81c
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 208}
-  - name: Frame_3
-    originalName: 
-    pivot: {x: 0.5, y: 0.62619525}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 116
-      width: 121
-      height: 84
-    spriteID: e3f7c5d3581f82542a91af9a92af5eef
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 116}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 3055276301
+      value0: 287816929
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: Axl(Block)
+    name: FG_stage(WIP)
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Frame_0
+    - name: FG_stage(WIP)
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 20
-        y: 5
-        width: 121
-        height: 104
-      spriteId: ef6b7fa8695c3af409807d2543a8bed9
-    - name: Frame_1
-      frameIndex: 1
-      additiveSortOrder: 0
-      cellRect:
-        x: 24
-        y: 3
-        width: 119
-        height: 82
-      spriteId: 72980ca5bb9600c4eb55526cc47bb254
-    - name: Frame_2
-      frameIndex: 2
-      additiveSortOrder: 0
-      cellRect:
-        x: 21
-        y: 3
-        width: 122
-        height: 83
-      spriteId: 6aa45f6d504b4904391aadc67184c81c
-    - name: Frame_3
-      frameIndex: 3
-      additiveSortOrder: 0
-      cellRect:
-        x: 22
-        y: 3
-        width: 121
-        height: 84
-      spriteId: e3f7c5d3581f82542a91af9a92af5eef
+        x: 0
+        y: 0
+        width: 1700
+        height: 700
+      spriteId: 33c0e74a271e9e342b62b74cc3c9ab60
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -275,5 +185,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 155, y: 155}
-  previousTextureSize: {x: 256, y: 512}
+  canvasSize: {x: 1700, y: 700}
+  previousTextureSize: {x: 2048, y: 1024}
