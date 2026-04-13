@@ -972,7 +972,7 @@ Camera:
   far clip plane: 5000
   field of view: 130
   orthographic: 0
-  orthographic size: 10
+  orthographic size: 1.8
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1402,7 +1402,7 @@ GameObject:
   - component: {fileID: 1031032695}
   - component: {fileID: 1031032696}
   m_Layer: 0
-  m_Name: PLAYER
+  m_Name: PLAYER1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1610,6 +1610,7 @@ MonoBehaviour:
   maxHealth: 100
   invulnerabilityDuration: 0
   blinkInterval: 0
+  _animator: {fileID: 0}
   currentHealth: 0
   healthSlider: {fileID: 1076358457}
 --- !u!114 &1031032696
@@ -2233,7 +2234,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: -5511613234736410362, guid: 73b2c99a842d3a34788df139d8051c0d, type: 3}
-  m_Color: {r: 0.9622642, g: 0.74049634, b: 0.17702031, a: 1}
+  m_Color: {r: 0.9607843, g: 0.89762324, b: 0.17647056, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -2317,6 +2318,7 @@ MonoBehaviour:
   maxHealth: 100
   invulnerabilityDuration: 1
   blinkInterval: 0.1
+  _animator: {fileID: 0}
   currentHealth: 0
   healthSlider: {fileID: 1931220118}
 --- !u!114 &1413537460

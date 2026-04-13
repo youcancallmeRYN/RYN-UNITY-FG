@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerBlockP1 : MonoBehaviour
 {
      [SerializeField] private Animator _animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _animator.SetBool("BlockP1", false);
+        _animator.SetBool("isBlocking", false);
     }
 
     // Update is called once per frame
