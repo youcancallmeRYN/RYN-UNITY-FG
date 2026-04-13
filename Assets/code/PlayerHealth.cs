@@ -44,16 +44,8 @@ public class PlayerHealth: MonoBehaviour, IDamageable
     public bool ApplyDamage(float amount) // from IDamageable function
     {
         if(currentHealth <=0f || invulnerabilityTimer > 0f)
-        {
              return false;
-              _animator.SetBool("isHurt", true);
-        }
-        else
-        {
-            _animator.SetBool("isHurt", false);
-
-        }
-
+    
         currentHealth -= amount;
 
         if (healthSlider != null)
