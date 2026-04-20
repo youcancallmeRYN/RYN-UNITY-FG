@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerBlockP1 : MonoBehaviour
 {
-     [SerializeField] private Animator _animator;
+    [SerializeField] private Animator _animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,6 +19,6 @@ public class PlayerBlockP1 : MonoBehaviour
         else
         {
              _animator.SetBool("isBlocking", false);
-        }
-    }
+        } 
+    }      
 }
