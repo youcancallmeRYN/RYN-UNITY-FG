@@ -19,6 +19,8 @@ public class PlayerAttackP1 : MonoBehaviour
     public float attackRange; 
     public LayerMask whatIsPlayers;
     public GameObject hitBox;
+    [SerializeField] public Transform HitRef;
+    [SerializeField] private GameObject HitParticle;
     private bool canAttack = true;
     private bool facingRight = true; // Player 1 start facing right, hence true
 
@@ -28,6 +30,7 @@ public class PlayerAttackP1 : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         _animator.SetBool("isAttacking", false);
+        HitParticle.GetComponent<SpriteRenderer>().sortingOrder = 3;
     }
 
     // Update is called once per frame
@@ -38,6 +41,7 @@ public class PlayerAttackP1 : MonoBehaviour
             if (horizInput > 0.1f && !facingRight) 
             {
                Flip();
+               FlipParticle();
             }
             else if (horizInput < -0.1f && facingRight)
             {
@@ -60,6 +64,14 @@ public class PlayerAttackP1 : MonoBehaviour
         hitBox.transform.localScale = currentScale;
         facingRight = !facingRight;
     }
+    void FlipParticle()
+    { 
+        Vector3 currentScale = HitRef.transform.localScale;
+        currentScale.x *= -1;
+        HitRef.transform.localScale = currentScale;
+        facingRight = !facingRight;
+    }
+
 
 
     void OnTriggerStay2D(Collider2D other)
@@ -74,6 +86,7 @@ public class PlayerAttackP1 : MonoBehaviour
                 {
                     damageable.ApplyDamage(damage);
                     Debug.Log("Hit!");
+                    Instantiate(HitParticle, new Vector2(this.HitRef.position.x, this.HitRef.position.y), Quaternion.identity);
                     StartCoroutine(AttackCooldown());
                 }
             }

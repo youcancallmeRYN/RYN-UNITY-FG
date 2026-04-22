@@ -64,13 +64,13 @@ public class PlayerHealth: MonoBehaviour, IDamageable
         currentHealth -= amount;
          if(Input.GetButton("BlockP1")) //Block Mechanic
          {
-            currentHealth -= (amount*-0.5f); //Damage chipped
+            currentHealth -= (amount*-1f); //Damage chipped
              Debug.Log("BLOCKED!");
              //blockVFX.enabled = true;
          }
          if(Input.GetButton("BlockP2")) //Block Mechanic
          {
-            currentHealth -= (amount*-0.5f); //Damage chipped
+            currentHealth -= (amount*-1f); //Damage chipped
              Debug.Log("BLOCKED!");
              //blockVFX.enabled = true;
              
