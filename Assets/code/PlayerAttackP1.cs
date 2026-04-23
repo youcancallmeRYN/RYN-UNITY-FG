@@ -30,7 +30,7 @@ public class PlayerAttackP1 : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         _animator.SetBool("isAttacking", false);
-        HitParticle.GetComponent<SpriteRenderer>().sortingOrder = 3;
+        HitParticle.GetComponent<SpriteRenderer>().sortingOrder = 4;
     }
 
     // Update is called once per frame

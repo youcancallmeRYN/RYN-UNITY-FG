@@ -1,5 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+
 [RequireComponent(typeof(SpriteRenderer))]
 public class PlayerHealth: MonoBehaviour, IDamageable
 {
@@ -12,13 +15,12 @@ public class PlayerHealth: MonoBehaviour, IDamageable
     public float currentHealth;
     private float  invulnerabilityTimer = 0f ;
     private SpriteRenderer spriteRenderer;
-    //private SpriteRenderer BlockParticle;
 
     public Slider healthSlider;
-
     SpriteRenderer sprite;
-    //SpriteRenderer blockVFX;
 
+   [SerializeField] private GameObject BlockParticle;
+   [SerializeField] public Transform BlockRef;
     
 //////////////////////////////////////////////////////////////////////////////////////
     void Awake()
@@ -26,9 +28,7 @@ public class PlayerHealth: MonoBehaviour, IDamageable
         currentHealth = maxHealth;
         sprite = GetComponent<SpriteRenderer>(); //GetComponent is a function hence the "()"
         _animator = GetComponent<Animator>();
-        //blockVFX = GetComponent<BlockParticle>();
-
-        //blockVFX.enabled = false;
+        BlockParticle.GetComponent<SpriteRenderer>().sortingOrder = 4;
 
         if (healthSlider != null)
         {
@@ -65,15 +65,8 @@ public class PlayerHealth: MonoBehaviour, IDamageable
          if(Input.GetButton("BlockP1")) //Block Mechanic
          {
             currentHealth -= (amount*-1f); //Damage chipped
+            Instantiate(BlockParticle, new Vector2(this.BlockRef.position.x, this.BlockRef.position.y ), Quaternion.identity);
              Debug.Log("BLOCKED!");
-             //blockVFX.enabled = true;
-         }
-         if(Input.GetButton("BlockP2")) //Block Mechanic
-         {
-            currentHealth -= (amount*-1f); //Damage chipped
-             Debug.Log("BLOCKED!");
-             //blockVFX.enabled = true;
-             
          }
 
         if (healthSlider != null)
