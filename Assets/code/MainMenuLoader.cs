@@ -9,6 +9,8 @@ public class MainMenuLoader : MonoBehaviour
 
     private void Awake()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         if (Instance == null)
         {
             Instance = this;
@@ -39,6 +41,14 @@ public class MainMenuLoader : MonoBehaviour
         #else
         Application.Quit(); //closes game
         #endif
+    }
+
+    public void Restart()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        DontDestroyOnLoad(gameObject);
+        
     }
 
 

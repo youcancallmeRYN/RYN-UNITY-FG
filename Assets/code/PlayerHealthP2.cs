@@ -23,6 +23,8 @@ public class PlayerHealthP2: MonoBehaviour, IDamageable
    [SerializeField] private GameObject BlockParticle;
    [SerializeField] public Transform BlockRef;
     
+
+    public GameOverLoader GameOver;
     
 //////////////////////////////////////////////////////////////////////////////////////
     void Awake()
@@ -81,14 +83,15 @@ public class PlayerHealthP2: MonoBehaviour, IDamageable
         {
             Die();
             return true;
-
         }
         invulnerabilityTimer = invulnerabilityDuration;
         return true;
     }
+    
 //////////////////////////////////////////////////////////////////////////////////////
     void Die()
     {
         gameObject.SetActive(false);
+        GameOver.gameOver();
     }
 }
