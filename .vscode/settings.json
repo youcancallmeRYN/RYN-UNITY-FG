@@ -66,5 +66,5 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj"
     },
-    "dotnet.defaultSolution": "RYN UNITY FG.sln"
+    "dotnet.defaultSolution": "RYN-UNITY-FG.sln"
 }
