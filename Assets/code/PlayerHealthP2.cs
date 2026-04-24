@@ -69,7 +69,7 @@ public class PlayerHealthP2: MonoBehaviour, IDamageable
         currentHealth -= amount;
          if(Input.GetButton("BlockP2")) //Block Mechanic
          {
-            currentHealth -= (amount*-1f); //Damage 
+            currentHealth -= (amount*-1f); //Damage nulled
             Instantiate(BlockParticle, new Vector2(this.BlockRef.position.x, this.BlockRef.position.y ), Quaternion.identity);
              Debug.Log("BLOCKED!");
          }
