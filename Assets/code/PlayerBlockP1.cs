@@ -7,6 +7,7 @@ public class PlayerBlockP1 : MonoBehaviour
     void Start()
     {
         _animator.SetBool("isBlocking", false);
+        _animator.SetBool("isGrounded", true);
     }
 
     // Update is called once per frame
@@ -21,5 +22,9 @@ public class PlayerBlockP1 : MonoBehaviour
         {
              _animator.SetBool("isBlocking", false);
         } 
+        if (Input.GetButton("AttackP1_2"))
+        {
+             _animator.SetBool("isGrounded", false);
+        }
     }      
 }
