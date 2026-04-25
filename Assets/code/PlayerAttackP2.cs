@@ -20,7 +20,7 @@ public class PlayerAttackP2 : MonoBehaviour
     public LayerMask whatIsPlayers;
     public GameObject hitBox;
     [SerializeField] public Transform HitRef;
-    [SerializeField] private GameObject HitParticle;
+    [SerializeField] private GameObject HitParticle2;
     private bool canAttack = true;
     private bool facingRight = false; // Player 2 start facing left, hence false 
 
@@ -32,7 +32,7 @@ public class PlayerAttackP2 : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         _animator.SetBool("isAttacking", false);
-        HitParticle.GetComponent<SpriteRenderer>().sortingOrder = 4;
+        HitParticle2.GetComponent<SpriteRenderer>().sortingOrder = 4;
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
@@ -81,7 +81,7 @@ public class PlayerAttackP2 : MonoBehaviour
                 {
                     damageable.ApplyDamage(damage);
                     Debug.Log("Hit!");
-                    Instantiate(HitParticle, new Vector2(this.HitRef.position.x, this.HitRef.position.y), Quaternion.identity);
+                    Instantiate(HitParticle2, new Vector2(this.HitRef.position.x, this.HitRef.position.y), Quaternion.identity);
                     audioManager.PlaySFX(audioManager.AttackSFX);
                     audioManager.PlaySFX(audioManager.Hit1SFX);
                     StartCoroutine(AttackCooldown());
