@@ -16,6 +16,7 @@ public class playerMovementARROWS : MonoBehaviour
     private float horizInput;
     private bool isGrounded;
     
+    AudioManager audioManager;
 
     
 
@@ -25,6 +26,7 @@ public class playerMovementARROWS : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
        
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         
     }
 
@@ -54,6 +56,7 @@ public class playerMovementARROWS : MonoBehaviour
         if (Input.GetButtonDown("Jump2") && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            audioManager.PlaySFX(audioManager.jumpSFX);
         }
 
         if (spriteRenderer != null)

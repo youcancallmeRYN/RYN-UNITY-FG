@@ -19,8 +19,12 @@ public class PlayerAttackP2 : MonoBehaviour
     public float attackRange; 
     public LayerMask whatIsPlayers;
     public GameObject hitBox;
+    [SerializeField] public Transform HitRef;
+    [SerializeField] private GameObject HitParticle;
     private bool canAttack = true;
     private bool facingRight = false; // Player 2 start facing left, hence false 
+
+     AudioManager audioManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,6 +32,8 @@ public class PlayerAttackP2 : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         _animator.SetBool("isAttacking", false);
+        HitParticle.GetComponent<SpriteRenderer>().sortingOrder = 4;
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -75,6 +81,9 @@ public class PlayerAttackP2 : MonoBehaviour
                 {
                     damageable.ApplyDamage(damage);
                     Debug.Log("Hit!");
+                    Instantiate(HitParticle, new Vector2(this.HitRef.position.x, this.HitRef.position.y), Quaternion.identity);
+                    audioManager.PlaySFX(audioManager.AttackSFX);
+                    audioManager.PlaySFX(audioManager.Hit1SFX);
                     StartCoroutine(AttackCooldown());
                 }
             }

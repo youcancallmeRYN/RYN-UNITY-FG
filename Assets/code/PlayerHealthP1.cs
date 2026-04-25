@@ -21,6 +21,10 @@ public class PlayerHealth: MonoBehaviour, IDamageable
 
    [SerializeField] private GameObject BlockParticle;
    [SerializeField] public Transform BlockRef;
+
+   AudioManager audioManager;
+
+   public GameOverLoader GameOver;
     
 //////////////////////////////////////////////////////////////////////////////////////
     void Awake()
@@ -29,6 +33,7 @@ public class PlayerHealth: MonoBehaviour, IDamageable
         sprite = GetComponent<SpriteRenderer>(); //GetComponent is a function hence the "()"
         _animator = GetComponent<Animator>();
         BlockParticle.GetComponent<SpriteRenderer>().sortingOrder = 4;
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
 
         if (healthSlider != null)
         {
@@ -66,6 +71,7 @@ public class PlayerHealth: MonoBehaviour, IDamageable
          {
             currentHealth -= (amount*-1f); //Damage chipped
             Instantiate(BlockParticle, new Vector2(this.BlockRef.position.x, this.BlockRef.position.y ), Quaternion.identity);
+            audioManager.PlaySFX(audioManager.BlockSFX);
              Debug.Log("BLOCKED!");
          }
 
@@ -87,5 +93,6 @@ public class PlayerHealth: MonoBehaviour, IDamageable
     void Die()
     {
         gameObject.SetActive(false);
+        GameOver.gameOver();
     }
 }

@@ -19,10 +19,13 @@ public class PlayerAttackP1 : MonoBehaviour
     public float attackRange; 
     public LayerMask whatIsPlayers;
     public GameObject hitBox;
+    public GameObject hitBox2;
     [SerializeField] public Transform HitRef;
     [SerializeField] private GameObject HitParticle;
     private bool canAttack = true;
     private bool facingRight = true; // Player 1 start facing right, hence true
+
+    AudioManager audioManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,6 +34,7 @@ public class PlayerAttackP1 : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         _animator.SetBool("isAttacking", false);
         HitParticle.GetComponent<SpriteRenderer>().sortingOrder = 4;
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -50,12 +54,23 @@ public class PlayerAttackP1 : MonoBehaviour
 
         if (Input.GetButton("AttackP1") && canAttack)
         {
+            //audioManager.PlaySFX(audioManager.AttackSFX); //this line of code can make the sfx LOUD and high pitched for NO PARTICULAR REASON.
             _animator.SetBool("isAttacking", true);
         }
         else
         {
             _animator.SetBool("isAttacking", false);
         }
+
+        /*if (Input.GetButton("AttackP1_2") && canAttack && !isGrounded)
+        {
+            //audioManager.PlaySFX(audioManager.AttackSFX); //this line of code can make the sfx LOUD and high pitched for NO PARTICULAR REASON.
+            _animator.SetBool("isAttacking", true);
+        }
+        else
+        {
+            _animator.SetBool("isAttacking", false);
+        }*/
     }
     void Flip()
     {
@@ -87,10 +102,29 @@ public class PlayerAttackP1 : MonoBehaviour
                     damageable.ApplyDamage(damage);
                     Debug.Log("Hit!");
                     Instantiate(HitParticle, new Vector2(this.HitRef.position.x, this.HitRef.position.y), Quaternion.identity);
+                    audioManager.PlaySFX(audioManager.AttackSFX);
+                    audioManager.PlaySFX(audioManager.Hit1SFX);
                     StartCoroutine(AttackCooldown());
                 }
             }
         }
+        /*if (Input.GetButton("AttackP1_2") && canAttack && !isGrounded)
+        {
+            Collider2D[] playersToDamage = Physics2D.OverlapCircleAll(hitBox.transform.position, attackRange, whatIsPlayers);
+
+            foreach (Collider2D Gameobject in playersToDamage)
+            {
+                if (other.TryGetComponent(out IDamageable damageable))
+                {
+                    damageable.ApplyDamage(damage);
+                    Debug.Log("Hit!");
+                    Instantiate(HitParticle, new Vector2(this.HitRef.position.x, this.HitRef.position.y), Quaternion.identity);
+                    audioManager.PlaySFX(audioManager.AttackSFX);
+                    audioManager.PlaySFX(audioManager.Hit2SFX);
+                    StartCoroutine(AttackCooldown());
+                }
+            }
+        }*/
     }
 
     private IEnumerator AttackCooldown()

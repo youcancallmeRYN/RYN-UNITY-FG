@@ -22,9 +22,10 @@ public class PlayerHealthP2: MonoBehaviour, IDamageable
 
    [SerializeField] private GameObject BlockParticle;
    [SerializeField] public Transform BlockRef;
-    
 
-    public GameOverLoader GameOver;
+   AudioManager audioManager;
+
+   public GameOverLoader GameOver;
     
 //////////////////////////////////////////////////////////////////////////////////////
     void Awake()
@@ -33,7 +34,8 @@ public class PlayerHealthP2: MonoBehaviour, IDamageable
         sprite = GetComponent<SpriteRenderer>(); //GetComponent is a function hence the "()"
         _animator = GetComponent<Animator>();
         BlockParticle.GetComponent<SpriteRenderer>().sortingOrder = 4;
-       
+       audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    
 
         if (healthSlider != null)
         {
@@ -72,6 +74,8 @@ public class PlayerHealthP2: MonoBehaviour, IDamageable
             currentHealth -= (amount*-1f); //Damage nulled
             Instantiate(BlockParticle, new Vector2(this.BlockRef.position.x, this.BlockRef.position.y ), Quaternion.identity);
              Debug.Log("BLOCKED!");
+             audioManager.PlaySFX(audioManager.BlockSFX);
+             //audioManager.PlaySFX(audioManager.BlockSFX);this instantiates alot of particles when not using the code in Awake() FOR NO REASON lolol.
          }
 
         if (healthSlider != null)

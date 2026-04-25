@@ -14,11 +14,16 @@ public class PlayerMovementWASD : MonoBehaviour
     private float horizInput;
     private bool isGrounded;
 
+    AudioManager audioManager;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
+
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     void Update()
@@ -27,16 +32,7 @@ public class PlayerMovementWASD : MonoBehaviour
 
         Vector2 rayOrigin = groundCheck != null ? (Vector2)groundCheck.position : (Vector2)transform.position + groundCheckOffset;
         RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, groundCheckDistance, groundLayer);
-        isGrounded = hit.collider != null;
-
-        /*if (horizInput != 0)
-        {
-            _animator.SetBool("horizInput", true);
-        }
-        else 
-        {
-            _animator.SetBool("horizInput", false);
-        }*/
+        isGrounded = hit.collider != null; 
 
         if (_animator)
         {
@@ -48,6 +44,7 @@ public class PlayerMovementWASD : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            audioManager.PlaySFX(audioManager.jumpSFX);
         }
 
 
